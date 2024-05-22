@@ -11,6 +11,9 @@ import icon1 from "../images/Group1432.svg"
 import icon2 from "../images/Group1435.svg"
 import icon3 from "../images/Group1434.svg"
 import icon4 from "../images/Group1433.svg"
+import iconPay1 from "../images/Rectangle586.png"
+import iconPay2 from "../images/Group1437.png"
+import iconPay3 from "../images/Group1438.png"
 import { v4 as uuid } from "uuid";
 
 export const products_data = [
@@ -76,3 +79,9 @@ export const icons = [
   icon3,
   icon4,
 ];
+
+export const iconsPayment = [
+  iconPay1,
+  iconPay2,
+  iconPay3,
+]

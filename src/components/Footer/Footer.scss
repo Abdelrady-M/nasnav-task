@@ -131,6 +131,7 @@ footer {
 .end {
   margin-top: 40px;
   @include vertical-align();
+  justify-content: space-between;
   width: 100%;
   p {
     font-weight: 300;
@@ -139,7 +140,7 @@ footer {
 
   div {
     @include vertical-align();
-    margin: auto;
+
     img {
       cursor: pointer;
       margin-right: 5px;

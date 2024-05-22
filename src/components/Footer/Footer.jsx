@@ -4,6 +4,7 @@ import f_logo from "../../images/Group 1436.svg";
 import plane from "../../images/Group 1431.svg";
 import nasIcon from "../../images/Group 1439.svg";
 import {icons} from '../../services/data'
+import {iconsPayment} from '../../services/data'
 const links = [
   "About Us",
   "Contact Us",
@@ -75,11 +76,11 @@ const Footer = () => {
         </div>
         <div className="end">
           <p>&copy; 2021 yeshtery, all rights reserved.</p>
-          <div>
-          <img src={`../../images/Rectangle586.png`} alt="" />
-          <img src={`../../images/Group1437.png`} alt="" />
-          <img src={`../../images/Group1438.png`} alt="" />
+          {iconsPayment.map((icon) => (    
+          <div key={icon} className="icon-payment">
+          <img src={icon} alt="yeshtery" />
           </div>
+        ))}  
           <h2>
             Powered By
             <img src={nasIcon} alt="" />
