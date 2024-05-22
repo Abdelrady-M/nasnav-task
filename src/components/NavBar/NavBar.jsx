@@ -4,7 +4,7 @@ import {paths} from "../../services/data"
 
 
 const NavBar = () => {
-  console.log(paths);
+
   return (
     <>
       <nav>

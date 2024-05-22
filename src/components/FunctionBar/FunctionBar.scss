@@ -20,6 +20,13 @@
     font-weight: 800;
     padding: 15px 10px;
   }
+  .btn {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-weight: 800;
+  }
   .image-wrapper {
     @include vertical-align();
     width: 26px;

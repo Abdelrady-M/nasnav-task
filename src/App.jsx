@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <TopBar />
-    <FunctionBar Items_No={0} />
+    <FunctionBar  />
     <NavBar />
     <Product />
     <MoreProducts/>
