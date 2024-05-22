@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./CartModal.scss";
 import closeIcon from "../../images/close.svg"; 
+import toast , {Toaster} from "react-hot-toast"
 
 // eslint-disable-next-line react/prop-types
 const CartModal = ({ toggleCartModal }) => {
@@ -32,6 +33,13 @@ const CartModal = ({ toggleCartModal }) => {
   const handelRemoveCart = () => {
     setCartItems([]);
     localStorage.removeItem("cart");
+    toast("Product has been deleted successfully!", {
+      icon: "👏",
+      style: {
+        backgroundColor: "#c2344d",
+        color: "white",
+      },
+    });
   }
 
   return (
@@ -71,6 +79,7 @@ const CartModal = ({ toggleCartModal }) => {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };

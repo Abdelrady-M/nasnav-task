@@ -8,6 +8,7 @@ import plus from "../../images/Path 363.svg";
 import minus from "../../images/Path 364.svg";
 import color1 from "../../images/Group 354.png";
 import color2 from "../../images/Group 356.png";
+import toast , {Toaster} from "react-hot-toast"
 
 const sizes = ["Small", "Medium", "Large", "X Large", "XX Large"];
 
@@ -27,6 +28,13 @@ const ProductDetail = () => {
       size: selectedSize,
       color: selectedColor,
     };
+    toast("Product has been Added to cart successfully!", {
+      icon: "👏",
+      style: {
+        backgroundColor: "green",
+        color: "white",
+      },
+    });
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
     const existingProductIndex = existingCart.findIndex(
       (item) =>
@@ -116,6 +124,7 @@ const ProductDetail = () => {
           <button type="button">Pickup from store</button>
         </div>
       </form>
+      <Toaster />
     </section>
   );
 };
