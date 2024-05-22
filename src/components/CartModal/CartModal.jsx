@@ -41,7 +41,7 @@ const CartModal = ({ toggleCartModal }) => {
                   <img src={item.image} alt={item.title} />
                   <div className="cart-item__details">
                     <h5>{item.title}</h5>
-                    <div className="qty">Qty: {item.quantity}</div>
+                    <div className="qty">Quantity: {item.quantity}</div>
                     <div>
                       <span className="price">{item.price * item.quantity} LE</span>
                       <button className="btnRemove" onClick={handelRemoveCart}>Remove</button>
