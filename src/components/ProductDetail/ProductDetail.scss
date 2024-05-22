@@ -173,3 +173,16 @@
 .price::after {
   @include vertical-line(-15px, 0);
 }
+@media screen and (max-width: 768px) {
+  .detail{
+    margin: 0;
+  }
+  .purchase{
+    flex-direction: column;
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
