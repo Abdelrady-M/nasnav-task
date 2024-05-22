@@ -90,7 +90,7 @@ const ProductDetail = () => {
         </div>
         <div className="color">
           <h1 className="title">Color</h1>
-          <div>
+          <div className="circle">
             <span onClick={() => setSelectedColor(color1)}>
               <img src={color1} alt="Color 1" />
             </span>

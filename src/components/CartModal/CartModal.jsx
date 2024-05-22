@@ -14,7 +14,7 @@ const CartModal = ({ toggleCartModal }) => {
     }
   }, []);
 
-  // FORMAT PRICE AS CURRENCY
+  // FORMAT PRICE AS CURRENCY LE
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US', {
       style: 'decimal',
