@@ -58,7 +58,7 @@ const CartModal = ({ toggleCartModal }) => {
           ) : (
             <div className="cart-elements">
               {cartItems.map((item) => (
-                <div className="cart-item" key={item.id}>
+                <div className="cart-item" key={item}>
                   <img src={item.image} alt={item.title} />
                   <div className="cart-item__details">
                     <h5>{item.title}</h5>
