@@ -1,0 +1,56 @@
+@import "../../helpers/Mixins.scss";
+@import "../../helpers/Variables.scss";
+
+.F-Bar {
+  .container {
+    @include container(18px, 18px);
+  }
+  .logo-wrapper {
+    @include vertical-align();
+    margin: auto;
+  }
+}
+.functions {
+  @include vertical-align();
+  cursor: pointer;
+  & > div {
+    @include vertical-align();
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 15px 10px;
+  }
+  .image-wrapper {
+    @include vertical-align();
+    width: 26px;
+    height: 24px;
+    margin-right: 8px;
+    span {
+      text-align: center;
+      position: absolute;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      top: 12px;
+      left: 27px;
+      font-size: 10px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $primaryColor;
+      z-index: 100;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .F-Bar {
+    .logo-wrapper {
+      display: none;
+    }
+  }
+  .functions {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

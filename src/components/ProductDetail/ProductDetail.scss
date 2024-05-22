@@ -1,0 +1,175 @@
+@import "../../helpers/Mixins.scss";
+@import "../../helpers/Variables.scss";
+
+.detail {
+  margin-left: 64px;
+  p {
+    margin: 10px 0;
+    font-weight: 700;
+  }
+  h4 {
+    margin: 0;
+    opacity: 0.6;
+  }
+  .logo-wrapper {
+    margin-bottom: 10px;
+  }
+
+  //------------------------Price------------------//
+}
+.rating {
+  @include vertical-align();
+  padding: 20px 0;
+  img {
+    margin-right: 3px;
+  }
+  span {
+    margin: 0 10px;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  span:first-of-type {
+    font-weight: 800;
+    opacity: 1;
+  }
+}
+.price {
+  position: relative;
+  @include vertical-align();
+  padding: 10px 0;
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    font-weight: 700;
+    span {
+      display: inline-block;
+      transform: translateY(4px);
+      font-size: 1.2rem;
+    }
+  }
+  .old-price,
+  .discount {
+    font-size: 0.7rem;
+  }
+  .old-price {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #a7a9ac;
+    text-decoration: line-through;
+    text-decoration-color: #aca8a8;
+  }
+
+  .discount {
+    padding: 5px;
+    font-weight: 600;
+    background-color: $primaryColor;
+  }
+}
+.size {
+  position: relative;
+  div {
+    @include vertical-align();
+
+    span {
+      @include center-align();
+      width: 50px;
+      height: 50px;
+      padding: 10px 5px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 1px solid #d9d9d9;
+      color: $secondaryColor;
+      font-size: 0.5rem;
+      font-weight: 700;
+    }
+
+    span:nth-of-type(3) {
+      background-color: #ececec;
+    }
+  }
+}
+
+.color {
+  position: relative;
+  div {
+    @include vertical-align();
+
+    span {
+      @include center-align();
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+    span:first-of-type {
+      border: 1px solid $secondaryColor;
+    }
+  }
+}
+
+.quantity {
+  div {
+    @include vertical-align();
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    width: 250px;
+    padding: 7px;
+
+    button {
+      @include center-align();
+      width: 35px;
+      height: 35px;
+      margin: 0;
+      border-radius: 50%;
+      background-color: $primaryColor;
+      padding: 3px;
+
+      img {
+        width: 11px;
+      }
+    }
+    span {
+      font-weight: 600;
+      font-size: 1rem;
+      color: $secondaryColor;
+      margin: auto;
+    }
+  }
+}
+
+.purchase {
+  margin-top: 25px;
+  @include vertical-align();
+
+  button {
+    width: 270px;
+    border-radius: 30px;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  button:first-of-type {
+    color: white;
+    background-color: $secondaryColor;
+    margin-right: 20px;
+  }
+  button:last-of-type {
+    background-color: $primaryColor;
+  }
+}
+
+.title {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.color::after,
+.size::after,
+.price::after {
+  @include vertical-line(-15px, 0);
+}

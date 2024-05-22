@@ -1,0 +1,13 @@
+@import "../../helpers/Mixins.scss";
+@import "../../helpers/Global.scss";
+
+.product {
+  .container {
+    @include container(40px, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

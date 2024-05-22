@@ -1,0 +1,29 @@
+@import "../../helpers/Mixins.scss";
+
+.main-image {
+  width: 570px;
+  @include vertical-align();
+
+  img {
+    width: 100%;
+  }
+}
+.images {
+  @include vertical-align();
+  justify-content: center;
+  div {
+    padding: 10px 5px;
+  }
+  .arrowOne,
+  .arrowTwo {
+    display: inline-block;
+    width: 20px;
+    cursor: pointer;
+  }
+  .arrowOne {
+    margin-right: 5px;
+  }
+  .arrowTwo {
+    margin-left: 5px;
+  }
+}

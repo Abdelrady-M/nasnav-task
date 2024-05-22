@@ -1,0 +1,59 @@
+@import "../../helpers/Mixins.scss";
+@import "../../helpers/Variables.scss";
+
+nav {
+  width: 100%;
+  background-color: black;
+
+  .container {
+    @include container(14px, 14px);
+
+    .category {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      font-weight: 600;
+      & :last-child {
+        color: red;
+      }
+    }
+  }
+}
+
+.nav2 {
+  width: 100%;
+  border-bottom: 0.5px solid #00000061;
+  .container {
+    @include container(10px, 0);
+    .path {
+      @include vertical-align();
+      padding: 24px 0;
+      a {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      span {
+        margin: 0 5px;
+        text-decoration: none;
+      }
+      & a:last-of-type {
+        text-decoration: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  nav{
+    .container {
+      .category{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 10px;
+      }
+    }
+  }
+}
