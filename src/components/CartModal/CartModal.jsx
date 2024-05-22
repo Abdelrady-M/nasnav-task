@@ -5,18 +5,22 @@ import closeIcon from "../../images/close.svg"; // Import the close icon correct
 // eslint-disable-next-line react/prop-types
 const CartModal = ({ toggleCartModal }) => {
   const [cartItems, setCartItems] = useState([]);
-
+  // GET CARTITEMS FROM LOCAL STORAGE
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart"));
     if (savedCart && Array.isArray(savedCart)) {
       setCartItems(savedCart);
     }
   }, []);
-
+  // CALCULATE THE QUANTITY
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
-
+  // HANDEL REMOVE ITEMS FROM CART
+  const handelRemoveCart = () => {
+    setCartItems([]);
+    localStorage.removeItem("cart");
+  }
   return (
     <div className="cart-wrapper">
       <div className="cart-modal">
@@ -40,7 +44,7 @@ const CartModal = ({ toggleCartModal }) => {
                     <div className="qty">Qty: {item.quantity}</div>
                     <div>
                       <span className="price">{item.price * item.quantity} LE</span>
-                      <button className="btnRemove">Remove</button>
+                      <button className="btnRemove" onClick={handelRemoveCart}>Remove</button>
                     </div>
                   </div>
                 </div>

@@ -71,7 +71,7 @@ export const paths = [
   { id: uuid(), name: "Adidas Black T-Shirt" }
 ]
 
-export const previewImage = [previewImage1, previewImage2, previewImage3, previewImage4];
+export const previewImages = [previewImage1, previewImage2, previewImage3, previewImage4];
 
 export const icons = [
   icon1,

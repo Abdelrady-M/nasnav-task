@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ProductDetail.scss";
 import logo from "../../images/Group346.svg";
+import mainImage from "../../images/main.png";
 import fillStar from "../../images/Path 368.svg";
 import star from "../../images/Path 369.svg";
 import plus from "../../images/Path 363.svg";
@@ -11,16 +12,17 @@ import color2 from "../../images/Group 356.png";
 const sizes = ["Small", "Medium", "Large", "X Large", "XX Large"];
 
 const ProductDetail = () => {
+  // STATE
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [selectedColor, setSelectedColor] = useState(color1);
-
+  // Handel Add to cart 
   const handleAddToCart = (event) => {
     event.preventDefault();
     const productDetails = {
       title: "Adidas black t-shirt lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       price: 9999,
-      image: logo,
+      image: mainImage,
       quantity: quantity,
       size: selectedSize,
       color: selectedColor,
@@ -41,7 +43,7 @@ const ProductDetail = () => {
     const eventCart = new Event("cartUpdated");
     window.dispatchEvent(eventCart);
   };
-
+  // increment and decrement the quantity
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 

@@ -8,10 +8,11 @@ import login from "../../images/Path 773.svg";
 import CartModal from "../CartModal/CartModal";
 
 const FunctionBar = () => {
+  //STATE
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [quantity, setQuantity] = useState(0);
-
+  //FETCH DATA FROM LOCAL STORAGE AND UPDATE CART QUALITY
   const updateCart = () => {
     const savedCart = JSON.parse(localStorage.getItem("cart"));
     if (savedCart && Array.isArray(savedCart)) {
@@ -24,12 +25,12 @@ const FunctionBar = () => {
   useEffect(() => {
     updateCart();
     window.addEventListener("cartUpdated", updateCart);
-
     return () => {
       window.removeEventListener("cartUpdated", updateCart);
     };
   }, []);
 
+  //TOGGLE CART MODAL
   const toggleCartModal = () => {
     setIsCartModalOpen(!isCartModalOpen);
   };
